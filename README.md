@@ -4,4 +4,4 @@ This will be 100 days of coding to learn how to code in Python, starting from th
 
 Day 1 : Band name generator<br>
 Day 2 : Tip calculator<br>
-Day 3 : Treasure Island<br>
+Day 3 : Treasure Island Text Game<br>
