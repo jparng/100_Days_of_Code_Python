@@ -34,7 +34,7 @@ player = [rock, paper, scissors]
 computer = [rock, paper, scissors]
 play = computer[random.randint(0,2)]
 
-if user >= 3:
+if user >= 3 or user < 0:
   print("Invalid input. Game over.")
 
 else:
