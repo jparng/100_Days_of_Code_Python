@@ -6,3 +6,4 @@ Day 1 : Band name generator<br>
 Day 2 : Tip calculator<br>
 Day 3 : Treasure Island Text Game<br>
 Day 4 : Rock Paper Scissors <br>
+Day 5: Password Generator <b4>
