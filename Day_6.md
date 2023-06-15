@@ -3,5 +3,5 @@ For Day 6 of code in python, I used a website called reeborg.ca where I would us
 ![Day_6_Maze](https://github.com/jparng/100_Days_of_Code_Python/assets/59073672/0f96698c-bd76-4598-8442-0f7851902a10)
 
 
-https://github.com/jparng/100_Days_of_Code_Python/assets/59073672/d64dbbed-d4e5-4eef-aefb-f4abe29c0ec0
 
+![Uploading ezgif.com-video-to-gif.gif…]()
