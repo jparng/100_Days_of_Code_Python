@@ -8,3 +8,4 @@ Day 3 : Treasure Island Text Game<br>
 Day 4 : Rock Paper Scissors <br>
 Day 5: Password Generator <br>
 Day 6: Using Reeborg's World to figure out a maze <br>
+Day 7: Hangman <br>
