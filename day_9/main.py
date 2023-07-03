@@ -1,3 +1,4 @@
+#from replit import clear
 from art import logo
 
 print(logo)
@@ -22,8 +23,7 @@ while not start_auction:
   add_user(name, bid)
   more_user = input("Are there any other bidders? Type 'yes' or 'no'.\n").lower()
   if more_user == "yes":
-    # clear()
-    clear()
+    #clear() function using replit.
   else:
     start_auction = True
 
