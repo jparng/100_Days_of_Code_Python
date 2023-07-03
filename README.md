@@ -10,3 +10,4 @@ Day 5: Password Generator <br>
 Day 6: Using Reeborg's World to figure out a maze <br>
 Day 7: Hangman <br>
 Day 8: Caesar Cypher <br>
+Day 9: Auction House <br>
