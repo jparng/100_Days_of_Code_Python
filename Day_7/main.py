@@ -15,7 +15,7 @@ print(hangman_art.logo)
 
 #Create blanks
 display = []
-#guessed = []
+guessed = []
 #guesser = False
 for _ in range(word_length):
     display += "_"
