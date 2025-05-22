@@ -5,9 +5,6 @@ import os
 from collections import defaultdict
 import matplotlib.pyplot as plt
 
-from tkinter import *
-from tkinter import ttk, messagebox
-
 class ExpenseTracker:
     def __init__(self):
         self.expenses = []
