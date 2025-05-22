@@ -1,5 +1,9 @@
 from tkinter import *
 from tkinter import ttk, messagebox
+import datetime
+import json
+import os
+from collections import defaultdict
 from expense_tracker import ExpenseTracker
 
 class ExpenseTrackerGUI:
