@@ -11,3 +11,6 @@ Day 6: Using Reeborg's World to figure out a maze <br>
 Day 7: Hangman <br>
 Day 8: Caesar Cypher <br>
 Day 9: Auction House <br>
+
+Expense Tracker Project:
+User can input their expenses on specific categories, they can also choose to create a budget, manage it, and also check the status on whether they go over or are still on track to meet the budget. A GUI is being built to be user friendly.
