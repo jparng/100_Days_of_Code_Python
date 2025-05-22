@@ -1,0 +1,47 @@
+{
+    "expenses": [
+        {
+            "amount": 1598.0,
+            "category": "Entertainment",
+            "subcategory": "electronics",
+            "description": "RoboRock Saros 10R",
+            "date": "2025-05-19"
+        },
+        {
+            "amount": 250.0,
+            "category": "Food",
+            "subcategory": "restaurant",
+            "description": "Ordered takeout",
+            "date": "2025-05-21"
+        }
+    ],
+    "categories": {
+        "Food": [
+            "groceries",
+            "restaurant",
+            "coffee"
+        ],
+        "Transport": [
+            "bus",
+            "train",
+            "gas",
+            "parking"
+        ],
+        "Housing": [
+            "rent",
+            "utilities",
+            "maintenance"
+        ],
+        "Entertainment": [
+            "movies",
+            "games",
+            "subscriptions",
+            "electronics",
+            "furniture"
+        ],
+        "Other": []
+    },
+    "budgets": {
+        "Entertainment": 2500.0
+    }
+}

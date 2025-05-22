@@ -1,9 +1,7 @@
-from Expense_Tracker_Proj.expense_tracker import add_expense
+import expense_tracker
 
 #Create the core data structure
 
-
-
-def main():
-    print("Expense Tracking Start")
-    add_expense()
+if __name__ == "__main__":
+    tracker = expense_tracker.ExpenseTracker()
+    tracker.run()
