@@ -1,6 +1,6 @@
-# 100_Days_of_Code_Python
+# ~100_Days_of_Code_Python~ Python Projects(Revamp)
 
-This will be 100 days of coding to learn how to code in Python, starting from the basics to eventually working on more advanced projects.
+~This will be 100 days of coding to learn how to code in Python, starting from the basics to eventually working on more advanced projects.~ Updating this repo to add random projects in Python. This will be a learning experience. I am leaving the original text for posterity
 
 Day 1 : Band name generator<br>
 Day 2 : Tip calculator<br>
