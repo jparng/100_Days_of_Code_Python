@@ -115,24 +115,6 @@ class ExpenseTracker:
         self.budgets[category] = float(amount)
         self.save_data()
             
-        # while True:
-        #     print("1. Check Budget")
-        #     print("2. Go back to Main Menu")
-        #     print("3. Exit")
-            
-        #     choice = input("Select an option: ")
-            
-        #     if choice == '1':
-        #         self.check_budgets()
-        #     elif choice == '2':
-        #         self.run()
-        #     elif choice == '3':
-        #         self.save_data()
-        #         print("Goodbye!")
-        #         break
-        #     else:
-        #         print("Invalid option. Please try again.")
-
     def get_budget(self, category):
         """Get budget for a category, return none if not set"""
         return self.budgets.get(category)
@@ -141,51 +123,47 @@ class ExpenseTracker:
         """Return all budgets as a dictionary"""
         return self.budgets.copy()
     
-    def check_budgets(self):
-        if not self.budgets:
+    def check_budget_status(self, category):
+        if category not in self.budgets:
             print("No budgets set yet. Use 'set_budget' to create budgets.")
             return
+        budget = self.budgets[category]
+        spent = sum(e['amount'] for e in self.expenses
+                    if e['category'] == category and
+                    self._is_current_month(e['date']))
+        return spent, budget
+    
+    def _is_current_month(self, date_str):
+        """Helper to check if date is in current month"""
+        expense_date = datetime.datetime.strptime(date_str, '%Y-%m-%d')
+        current_date = datetime.datetime.now()
+        return (expense_date.year == current_date.year and expense_date.month == current_date.month)
+    
+        # print("\n=== Budget Status ===")
+        # grand_total = sum(self.budgets.values())
+        # total_spent = 0
+        # overspent_categories = []
         
-        print("\n=== Budget Status ===")
-        grand_total = sum(self.budgets.values())
-        total_spent = 0
-        overspent_categories = []
-        
-        for category, budget in self.budgets.items():
-            spent = sum(e['amount'] for e in self.expenses
-                        if e['category'] == category and
-                        datetime.datetime.strptime(e['date'], '%Y-%m-%d').month == datetime.datetime.now().month)
-            total_spent += spent
+        # for category, budget in self.budgets.items():
+        #     spent = sum(e['amount'] for e in self.expenses
+        #                 if e['category'] == category and
+        #                 datetime.datetime.strptime(e['date'], '%Y-%m-%d').month == datetime.datetime.now().month)
+        #     total_spent += spent
             
-            remaining = budget - spent
-            status = "UNDER" if remaining >= 0 else "OVER"
-            color_code = "\033[92m" if remaining >= 0 else "\033[91m" #green and red codes
+        #     remaining = budget - spent
+        #     status = "UNDER" if remaining >= 0 else "OVER"
+        #     color_code = "\033[92m" if remaining >= 0 else "\033[91m" #green and red codes
             
-            print(f"{category}: Spent ${spent:.2f} of ${budget:.2f} | {color_code} {status} by ${abs(remaining):.2f}\033[0m | ({spent/budget*100:.1f}%)")
+        #     print(f"{category}: Spent ${spent:.2f} of ${budget:.2f} | {color_code} {status} by ${abs(remaining):.2f}\033[0m | ({spent/budget*100:.1f}%)")
         
-            if remaining < 0:
-                overspent_categories.append(category)
+        #     if remaining < 0:
+        #         overspent_categories.append(category)
                 
-        print(f"\nTotal budgeted: ${grand_total:.2f}")
-        print(f"Total spent: ${total_spent:.2f}")
-        if overspent_categories:
-            print("\n\033[91mWARNING: Overspent in categories:", ", ".join(overspent_categories),"\033[0m")
+        # print(f"\nTotal budgeted: ${grand_total:.2f}")
+        # print(f"Total spent: ${total_spent:.2f}")
+        # if overspent_categories:
+        #     print("\n\033[91mWARNING: Overspent in categories:", ", ".join(overspent_categories),"\033[0m")
             
-        # while True:
-        #     print("1. Go back to Main Menu")
-        #     print("2. Exit")
-            
-        #     choice = input("Select an option: ")
-            
-        #     if choice == '1':
-        #         self.run()
-        #     elif choice == '2':
-        #         self.save_data()
-        #         print("Goodbye!")
-        #         break
-        #     else:
-        #         print("Invalid option. Please try again.")
-          
 
 #main menu
 

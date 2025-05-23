@@ -42,6 +42,7 @@
         "Other": []
     },
     "budgets": {
-        "Entertainment": 2500.0
+        "Entertainment": 2500.0,
+        "Food": 2555.0
     }
 }
